@@ -1,0 +1,93 @@
+// Create a User
+POST http://localhost:5000/api/v1/users
+Content-Type: application/json
+
+{
+    "name": "Febri",
+    "email": "admin@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "admin"
+}
+
+###
+// Get all users
+GET http://localhost:5000/api/v1/users
+
+###
+// Get single user
+GET http://localhost:5000/api/v1/users/074fcf38-37ef-4a90-bcb0-c632af3b7d6c
+
+###
+// Update user
+PATCH http://localhost:5000/api/v1/users/074fcf38-37ef-4a90-bcb0-c632af3b7d6c
+Content-Type: application/json
+
+{
+    "name": "John Updated",
+    "email": "john@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+// Deleted user
+DELETE http://localhost:5000/api/v1/users/074fcf38-37ef-4a90-bcb0-c632af3b7d6c
+
+###
+// Login user
+POST http://localhost:5000/api/v1/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123456"
+}
+
+###
+POST http://localhost:5000/api/v1/login
+Content-Type: application/json
+
+{
+    "email": "john@gmail.com",
+    "password": "123456"
+}
+
+
+###
+// Cek login dengan session
+GET http://localhost:5000/api/v1/me
+
+###
+DELETE http://localhost:5000/api/v1/logout
+
+###
+// Get all a product
+GET http://localhost:5000/api/v1/products
+
+###
+// get single product
+GET http://localhost:5000/api/v1/products/17e7ef77-a8e2-43f1-aa43-5c4cbf908639
+
+###
+// POST data product
+POST http://localhost:5000/api/v1/products
+Content-Type: application/json
+
+{
+    "name": "Product 6",
+    "price": 991
+}
+
+###
+PATCH  http://localhost:5000/api/v1/products/17e7ef77-a8e2-43f1-aa43-5c4cbf908639
+Content-Type: application/json
+
+{
+    "name": "Product Updated",
+    "price": 956
+}
+
+###
+DELETE http://localhost:5000/api/v1/products/17e7ef77-a8e2-43f1-aa43-5c4cbf908639
